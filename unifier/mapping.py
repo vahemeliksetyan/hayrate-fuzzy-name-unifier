@@ -80,6 +80,14 @@ class Mapping:
         pairs = dict(zip(table["variant"].str.strip(), table["canonical"].str.strip()))
         return cls(pairs, **kwargs)
 
+    @classmethod
+    def from_file(cls, path: str | Path, **kwargs) -> "Mapping":
+        """Groups workbook (.xlsx, one column per group) or a variant,canonical CSV."""
+        if Path(path).suffix.lower() in {".xlsx", ".xlsm", ".xls"}:
+            from unifier.groups import read_groups
+            return cls(read_groups(path), **kwargs)
+        return cls.from_csv(path, **kwargs)
+
 
 def unmatched(series: pd.Series, mapping: Mapping) -> pd.DataFrame:
     """Values no mapping row covers, most frequent first: the to-do list for the next pass."""

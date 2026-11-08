@@ -55,7 +55,7 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
         is_other = df[col].astype("string").str.strip() == label
         df.loc[is_other, col] = df.loc[is_other, other]
     # Universities keep their official Armenian names, so no transliteration here.
-    universities = Mapping.from_csv(MAPPINGS / "universities.csv", transliterate=False)
+    universities = Mapping.from_file(MAPPINGS / "universities.xlsx", transliterate=False)
     df["university"] = df["university"].map(lambda v: universities.unify(v) if isinstance(v, str) else v)
     df.loc[df["university"] == "Response", "university"] = pd.NA  # stray header cell in the export
     return df.drop(columns=["university_other", "employment_type_other"])
@@ -63,10 +63,10 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
 
 def unify(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
-    companies = Mapping.from_csv(MAPPINGS / "companies.csv")
+    companies = Mapping.from_file(MAPPINGS / "companies.xlsx")
     for col in EMPLOYER_COLUMNS:
         df[col] = companies.apply(df[col])
-    df["faculty"] = Mapping.from_csv(MAPPINGS / "faculties.csv").apply(df["faculty"])
+    df["faculty"] = Mapping.from_file(MAPPINGS / "faculties.xlsx").apply(df["faculty"])
     return df
 
 
@@ -134,7 +134,7 @@ def main() -> None:
         df["university"].value_counts().to_frame("respondents").to_excel(xl, sheet_name="universities")
         df["faculty"].value_counts().to_frame("respondents").to_excel(xl, sheet_name="faculties")
 
-    companies = Mapping.from_csv(MAPPINGS / "companies.csv")
+    companies = Mapping.from_file(MAPPINGS / "companies.xlsx")
     names = pd.concat([raw[c] for c in PREFERRED])
     unmatched(names, companies).to_excel(args.output / "unmatched_employers.xlsx", index=False)
     suggest_groups(names, threshold=80, mapping=companies, min_count=3).to_excel(

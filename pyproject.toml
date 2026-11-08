@@ -3,9 +3,9 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "fuzzy-name-unifier"
-version = "1.0.0"
-description = "Unify messy free-text names (company names, survey answers, vendors, universities) with normalization, transliteration and reviewed fuzzy matching."
+name = "hayrate-fuzzy-name-unifier"
+version = "1.1.0"
+description = "Group messy hand-typed names (companies, survey answers, vendors, universities) into an Excel file you edit, then unify every spelling to one name. Fuzzy matching + transliteration."
 readme = "README.md"
 license = { text = "MIT" }
 authors = [{ name = "Vahe Meliksetyan" }]
@@ -27,7 +27,7 @@ dev = ["pytest>=7"]
 unifier = "unifier.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/vahemeliksetyan/fuzzy-name-unifier"
+Homepage = "https://github.com/vahemeliksetyan/hayrate-fuzzy-name-unifier"
 
 [tool.setuptools]
 packages = ["unifier"]

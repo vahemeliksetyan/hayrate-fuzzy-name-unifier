@@ -61,12 +61,29 @@ def test_suggest_groups_and_unmatched():
     assert set(todo["value"]) == {"Google", "Gogle"}
 
 
-def test_quickstart_cli(tmp_path):
-    out = tmp_path / "clean.csv"
-    subprocess.run([sys.executable, "-m", "unifier", "apply", str(QUICKSTART / "companies_messy.csv"),
-                    "-c", "company", "-m", str(QUICKSTART / "mapping.csv"), "-o", str(out)],
-                   check=True, cwd=ROOT, capture_output=True)
-    unified = pd.read_csv(out)["company_unified"].dropna()
+def test_groups_workbook_last_value_is_target(tmp_path):
+    from unifier.groups import read_groups
+    path = tmp_path / "groups.xlsx"
+    pd.DataFrame({"Group 1": ["Ameriabank", "Amerya Bank", "Ameria Bank"],
+                  "Group 2": ["n/a", "-", "none"]}).to_excel(path, index=False)
+    pairs = read_groups(path)
+    assert pairs["Ameriabank"] == pairs["Amerya Bank"] == "Ameria Bank"
+    m = Mapping.from_file(path)
+    assert m.unify("AMERIABANK") == "Ameria Bank" and m.unify("n/a") is None
+
+
+def test_run_two_rounds(tmp_path):
+    """1st run writes groups.xlsx; after editing, the 2nd run applies it."""
+    import shutil
+    data = tmp_path / "companies_messy.csv"
+    shutil.copy(QUICKSTART / "companies_messy.csv", data)
+    cmd = [sys.executable, "-m", "unifier", "run", str(data), "-c", "company", "-t", "80"]
+    subprocess.run(cmd, check=True, cwd=ROOT, capture_output=True)
+    first = pd.read_excel(tmp_path / "groups.xlsx")
+    assert first.columns[0] == "Group 1" and len(first.columns) > 3
+    shutil.copy(QUICKSTART / "groups.xlsx", tmp_path / "groups.xlsx")  # the "edited" version
+    subprocess.run(cmd, check=True, cwd=ROOT, capture_output=True)
+    unified = pd.read_csv(tmp_path / "companies_messy_unified.csv")["company_unified"].dropna()
     assert set(unified) == {"Microsoft", "Google", "Amazon", "Coca-Cola", "Yandex", "Deloitte",
                             "Société Générale", "Nestlé"}
 
