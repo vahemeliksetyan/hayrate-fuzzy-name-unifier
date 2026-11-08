@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fuzzy-name-unifier"
+version = "1.0.0"
+description = "Unify messy free-text names (company names, survey answers, vendors, universities) with normalization, transliteration and reviewed fuzzy matching."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Vahe Meliksetyan" }]
+requires-python = ">=3.9"
+dependencies = ["pandas>=1.5", "openpyxl>=3.1", "rapidfuzz>=3.0"]
+keywords = ["fuzzy matching", "data cleaning", "deduplication", "entity resolution", "name matching",
+            "company names", "survey data", "standardization", "transliteration", "rapidfuzz", "pandas"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Text Processing",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+unifier = "unifier.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/vahemeliksetyan/fuzzy-name-unifier"
+
+[tool.setuptools]
+packages = ["unifier"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

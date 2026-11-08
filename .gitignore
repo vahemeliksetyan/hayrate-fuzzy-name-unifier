@@ -1,0 +1,20 @@
+# Private data never goes in the repo
+/data/
+/private/
+*.private.*
+
+# Generated
+outputs/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# Local
+.DS_Store
+.idea/
+.vscode/
+.venv/
+~$*.xlsx

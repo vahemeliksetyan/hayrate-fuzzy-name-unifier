@@ -1,0 +1,121 @@
+respondent_id,company,department
+1,Google LLC,HR
+2,AMAZON,Sales
+3,The Coca-Cola Company,IT
+4,Microsfot,HR
+5,amazon.com,IT
+6,Deloitte LLP,Marketing
+7,Nestlé,IT
+8,NESTLE S.A.,Sales
+9,Soc Generale,Marketing
+10,Gogle,IT
+11,Yandex,Marketing
+12,MICROSOFT CORPORATION,Finance
+13,AMAZON,Finance
+14,amazon.com,Finance
+15,Deloitte & Touche,HR
+16,Deloitte & Touche,HR
+17,Coca Cola,HR
+18,Gogle,Marketing
+19,MICROSOFT CORPORATION,IT
+20,MICROSOFT CORPORATION,Sales
+21,Microsoft,Marketing
+22,NESTLE S.A.,HR
+23,-,Sales
+24,microsoft,Marketing
+25,Google Inc.,Sales
+26,coca cola co,IT
+27,ООО Яндекс,HR
+28,Google Inc.,HR
+29,Microsoft Inc,HR
+30,Google Inc.,IT
+31,coca cola co,HR
+32,Gogle,HR
+33,GOOGLE,IT
+34,MICROSOFT CORPORATION,Finance
+35,Deloitte & Touche,Marketing
+36,Micro soft,Sales
+37,CocaCola,Finance
+38,"Amazon.com, Inc.",IT
+39,GOOGLE,Finance
+40,Google,HR
+41,Deloitte LLP,IT
+42,Deloitte & Touche,IT
+43,Deloitte,Sales
+44,Amazon Inc,IT
+45,amazon.com,Sales
+46,GOOGLE,Marketing
+47,Google,HR
+48,The Coca-Cola Company,IT
+49,Яндекс,HR
+50,Google LLC,HR
+51,SOCIETE GENERALE SA,Marketing
+52,Google,Marketing
+53,,HR
+54,Amazon Inc,IT
+55,Microsoft Inc,HR
+56,Coca Cola,Sales
+57,Яндекс,IT
+58,Micro soft,HR
+59,CocaCola,HR
+60,Microsoft,IT
+61,Amazon,HR
+62,,Sales
+63,GOOGLE,Marketing
+64,Societe Generale,IT
+65,Microsoft,IT
+66,google llc,Sales
+67,Amazn,Sales
+68,nestle,HR
+69,None,Sales
+70,Яндекс,Sales
+71,Microsoft,Sales
+72,amazon.com,Finance
+73,MICROSOFT CORPORATION,HR
+74,Google LLC,Marketing
+75,Micro soft,Marketing
+76,Société Générale,Finance
+77,AMAZON,Marketing
+78,don't know,Sales
+79,Google Inc.,Finance
+80,Amazn,Sales
+81,Google Inc.,HR
+82,MICROSOFT CORPORATION,IT
+83,yandex llc,HR
+84,Soc Generale,Sales
+85,The Coca-Cola Company,Marketing
+86,Deloitte LLP,HR
+87,Microsoft,Marketing
+88,Microsoft,HR
+89,MICROSOFT CORPORATION,IT
+90,Société Générale,Sales
+91,yandex llc,HR
+92,GOOGLE,HR
+93,AMAZON,Sales
+94,coca cola co,HR
+95,microsoft,IT
+96,Amazn,Finance
+97,Google LLC,HR
+98,AMAZON,IT
+99,Coca Cola,Marketing
+100,Deloitte LLP,Marketing
+101,microsoft,IT
+102,Micro soft,HR
+103,Coca Cola,IT
+104,GOOGLE,HR
+105,Google Inc.,HR
+106,CocaCola,HR
+107,yandex llc,IT
+108,Gogle,IT
+109,Microsoft Corp.,Marketing
+110,Nestlé SA,HR
+111,Microsoft Inc,HR
+112,Microsoft,Marketing
+113,Société Générale,Marketing
+114,Coca-Cola,IT
+115,Yandex,Finance
+116,Micro soft,Sales
+117,Яндекс,Finance
+118,Microsoft Inc,Sales
+119,Microsoft Corp.,Sales
+120,Google Inc.,Finance

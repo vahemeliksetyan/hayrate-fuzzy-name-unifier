@@ -1,0 +1,33 @@
+group,variant,count,similarity,canonical,group_total,accept
+1,Microsoft,10,100.0,Microsoft,29,y
+1,Microsoft Corporation,7,100.0,Microsoft,29,y
+1,Micro Soft,5,94.7,Microsoft,29,y
+1,Microsoft Inc,4,100.0,Microsoft,29,y
+1,Microsoft Corp.,2,100.0,Microsoft,29,y
+1,Microsfot,1,88.9,Microsoft,29,y
+2,Google,9,100.0,Google,25,y
+2,Google Inc.,7,100.0,Google,25,y
+2,Google Llc,5,100.0,Google,25,y
+2,Gogle,4,90.9,Google,25,y
+3,Amazon,6,100.0,Amazon,16,y
+3,Amazon.Com,4,80.0,Amazon,16,y
+3,Amazn,3,90.9,Amazon,16,y
+3,Amazon Inc,2,100.0,Amazon,16,y
+3,"Amazon.Com, Inc.",1,80.0,Amazon,16,y
+6,Coca Cola,4,100.0,Coca Cola,14,y
+6,The Coca-Cola Company,3,81.8,Coca Cola,14,y
+6,Coca Cola Co,3,100.0,Coca Cola,14,y
+6,Cocacola,3,94.1,Coca Cola,14,y
+6,Coca-Cola,1,100.0,Coca Cola,14,y
+8,Societe Generale,4,100.0,Societe Generale,7,y
+8,Soc Generale,2,85.7,Societe Generale,7,y
+8,Societe Generale Sa,1,100.0,Societe Generale,7,y
+4,Deloitte Llp,4,100.0,Deloitte Llp,5,y
+4,Deloitte,1,100.0,Deloitte Llp,5,y
+7,Yandeks,4,100.0,Yandeks,5,y
+7,Ooo Yandeks,1,100.0,Yandeks,5,y
+9,Yandex Llc,3,100.0,Yandex Llc,5,y
+9,Yandex,2,100.0,Yandex Llc,5,y
+10,Nestle,2,100.0,Nestle,5,y
+10,Nestle S.A.,2,100.0,Nestle,5,y
+10,Nestle Sa,1,100.0,Nestle,5,y
